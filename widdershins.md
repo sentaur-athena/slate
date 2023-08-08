@@ -3,16 +3,14 @@ title: API Reference v0
 language_tabs:
   - ruby: Ruby
   - python: Python
-  - javascript: JavaScript
 language_clients:
   - ruby: ""
   - python: ""
-  - javascript: ""
 toc_footers: []
 includes: []
 search: false
 highlight_theme: darkula
-headingLevel: 3
+headingLevel: 2
 
 ---
 
@@ -77,27 +75,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/members/{member_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/members/{member_id}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -407,26 +384,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/members/{member_id}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/organizations/{organization_slug}/members/{member_id}/`
 
 Remove an organization member.
@@ -485,27 +442,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/projects/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/projects/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -670,27 +606,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/stats_v2/?groupBy=outcome&field=sum%28quantity%29',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/stats_v2/`
 
 Query event counts for your Organization.
@@ -839,27 +754,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/`
 
 Return a list of organizations available to the authenticated session.  This is particularly useful for requests with an user bound context.  For API key based requests this will only return the organization that belongs to the key.
@@ -961,27 +855,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/eventids/{event_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/eventids/{event_id}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -1361,27 +1234,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/`
 
 Return details on an individual organization including various details such as membership access, features, and teams.
@@ -1716,31 +1568,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "name": "string",
-  "slug": "string"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `PUT /api/0/organizations/{organization_slug}/`
 
 Update various attributes and configurable settings for the given organization.
@@ -1973,27 +1800,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/repos/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/repos/`
 
 Return a list of version control repositories for a given organization.
@@ -2074,27 +1880,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/repos/{repo_id}/commits/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/repos/{repo_id}/commits/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -2180,27 +1965,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/stats/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/stats/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -2386,27 +2150,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/users/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/users/`
 
 Return a list of users that belong to a given organization.
@@ -2569,27 +2312,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/shortids/{short_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/shortids/{short_id}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -2760,27 +2482,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/teams/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/teams/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -3090,32 +2791,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "name": "string",
-  "slug": "string",
-  "idp_provisioned": false
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/teams/?name=string',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `POST /api/0/organizations/{organization_slug}/teams/`
 
 Create a new team bound to an organization.
@@ -3304,27 +2979,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/teams/{organization_slug}/{team_slug}/projects/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/teams/{organization_slug}/{team_slug}/projects/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -3574,27 +3228,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/teams/{organization_slug}/{team_slug}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/teams/{organization_slug}/{team_slug}/`
 
 Return details on an individual team.
@@ -3725,31 +3358,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "name": "string",
-  "slug": "string"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/teams/{organization_slug}/{team_slug}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `PUT /api/0/teams/{organization_slug}/{team_slug}/`
 
 Update various attributes and configurable settings for the given team.
@@ -3859,26 +3467,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/teams/{organization_slug}/{team_slug}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/teams/{organization_slug}/{team_slug}/`
 
 Schedules a team for deletion.
@@ -3938,27 +3526,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/teams/{organization_slug}/{team_slug}/stats/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/teams/{organization_slug}/{team_slug}/stats/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -4156,33 +3723,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "name": "string",
-  "slug": "string",
-  "platform": "string",
-  "default_rules": true
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/teams/{organization_slug}/{team_slug}/projects/?name=string',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `POST /api/0/teams/{organization_slug}/{team_slug}/projects/`
 
 Create a new project bound to a team.
@@ -4355,27 +3895,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -4617,27 +4136,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -4969,35 +4467,6 @@ headers = {
 r = requests.put('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "name": "string",
-  "slug": "string",
-  "platform": "string",
-  "isBookmarked": true,
-  "digestsMinDelay": 0,
-  "digestsMaxDelay": 0
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -5350,26 +4819,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/projects/{organization_slug}/{project_slug}/`
 
 Schedules a project for deletion.
@@ -5433,30 +4882,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/files/dsyms/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "file": "string"
-}';
-const headers = {
-  'Content-Type':'multipart/form-data',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/files/dsyms/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -5542,26 +4967,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/files/dsyms/?id=string',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/projects/{organization_slug}/{project_slug}/files/dsyms/`
 
 Delete a debug information file for a given project.
@@ -5620,27 +5025,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/users/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/users/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -5730,27 +5114,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/tags/{key}/values/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/projects/{organization_slug}/{project_slug}/tags/{key}/values/`
 
 Return a list of values associated with this key.  The `query`
@@ -5833,27 +5196,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/stats/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/stats/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -6045,27 +5387,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/user-feedback/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/projects/{organization_slug}/{project_slug}/user-feedback/`
 
 Return a list of user feedback items within this project.
@@ -6166,33 +5487,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/user-feedback/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "event_id": "string",
-  "name": "string",
-  "email": "string",
-  "comments": "string"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/user-feedback/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -6320,30 +5614,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/keys/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "name": "string"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/keys/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -6480,26 +5750,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/keys/{key_id}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/projects/{organization_slug}/{project_slug}/keys/{key_id}/`
 
 Delete a client key.
@@ -6560,33 +5810,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/hooks/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "url": "string",
-  "events": [
-    "string"
-  ]
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/hooks/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -6704,33 +5927,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "url": "string",
-  "events": [
-    "string"
-  ]
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/hooks/{hook_id}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `PUT /api/0/projects/{organization_slug}/{project_slug}/hooks/{hook_id}/`
 
 Update a service hook.
@@ -6836,26 +6032,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/hooks/{hook_id}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/projects/{organization_slug}/{project_slug}/hooks/{hook_id}/`
 
 Remove a service hook.
@@ -6920,27 +6096,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/keys/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/keys/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -7070,30 +6225,6 @@ headers = {
 r = requests.put('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/keys/{key_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "name": "string"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/keys/{key_id}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -7240,27 +6371,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/files/dsyms/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/projects/{organization_slug}/{project_slug}/files/dsyms/`
 
 Retrieve a list of debug information files for a given project.
@@ -7328,27 +6438,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/hooks/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/hooks/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -7442,27 +6531,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/hooks/{hook_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/hooks/{hook_id}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -7568,27 +6636,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/events/{event_id}/source-map-debug/?frame_idx=0&exception_idx=0',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/projects/{organization_slug}/{project_slug}/events/{event_id}/source-map-debug/`
 
 Retrieve information about source maps for a given event.
@@ -7683,27 +6730,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/events/{event_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/events/{event_id}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -8658,27 +7684,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/events/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/projects/{organization_slug}/{project_slug}/events/`
 
 Return a list of events bound to a project.
@@ -8822,27 +7827,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/issues/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/issues/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -9123,46 +8107,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "status": "string",
-  "statusDetails": {
-    "inRelease": "string",
-    "inNextRelease": true,
-    "inCommit": "string",
-    "ignoreDuration": 0,
-    "ignoreCount": 0,
-    "ignoreWindow": 0,
-    "ignoreUserCount": 0,
-    "ignoreUserWindow": 0
-  },
-  "ignoreDuration": 0,
-  "isPublic": true,
-  "merge": true,
-  "assignedTo": "string",
-  "hasSeen": true,
-  "isBookmarked": true
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/issues/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `PUT /api/0/projects/{organization_slug}/{project_slug}/issues/`
 
 Bulk mutate various attributes on issues.  The list of issues to modify is given through the `id` query parameter.  It is repeated for each issue that should be modified.
@@ -9305,26 +8249,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/issues/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/projects/{organization_slug}/{project_slug}/issues/`
 
 Permanently remove the given issues. The list of issues to modify is given through the `id` query parameter.  It is repeated for each issue that should be removed.
@@ -9387,27 +8311,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/issues/{issue_id}/tags/{key}/values/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/issues/{issue_id}/tags/{key}/values/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -9494,27 +8397,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/issues/{issue_id}/tags/{key}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/issues/{issue_id}/tags/{key}/`
 
 Returns details for given tag key related to an issue.
@@ -9591,27 +8473,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/issues/{issue_id}/hashes/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/issues/{issue_id}/hashes/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -10375,27 +9236,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/issues/{issue_id}/events/oldest/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/issues/{issue_id}/events/oldest/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -11348,27 +10188,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/issues/{issue_id}/events/latest/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/issues/{issue_id}/events/latest/`
 
 Retrieves the details of the latest event for an issue.
@@ -12318,27 +11137,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/issues/{issue_id}/events/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/issues/{issue_id}/events/`
 
 This endpoint lists an issue's events.
@@ -12480,27 +11278,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/issues/{issue_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/issues/{issue_id}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -12976,35 +11753,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "status": "string",
-  "assignedTo": "string",
-  "hasSeen": true,
-  "isBookmarked": true,
-  "isSubscribed": true,
-  "isPublic": true
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/issues/{issue_id}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `PUT /api/0/issues/{issue_id}/`
 
 Updates an individual issue's attributes.  Only the attributes submitted are modified.
@@ -13186,26 +11934,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/issues/{issue_id}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/issues/{issue_id}/`
 
 Removes an individual issue.
@@ -13276,27 +12004,6 @@ r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/sess
 }, headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/sessions/?project=0&field=string',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -13531,27 +12238,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/releases/`
 
 Return a list of releases for a given organization.
@@ -13757,59 +12443,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/organizations/{organization_slug}/releases/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "version": "string",
-  "ref": "string",
-  "url": "string",
-  "projects": [
-    "string"
-  ],
-  "dateReleased": "2019-08-24T14:15:22Z",
-  "commits": [
-    {
-      "patch_set": [
-        {
-          "path": "string",
-          "type": "A"
-        }
-      ],
-      "repository": "string",
-      "author_name": "string",
-      "author_email": "string",
-      "timestamp": "2019-08-24T14:15:22Z",
-      "message": "string",
-      "id": "string"
-    }
-  ],
-  "refs": [
-    {
-      "repository": "string",
-      "commit": "string",
-      "previousCommit": "string"
-    }
-  ]
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -14060,27 +12693,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/releases/{version}/`
 
 Return a release for a given organization.
@@ -14258,38 +12870,6 @@ headers = {
 r = requests.put('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "ref": "string",
-  "url": "string",
-  "dateReleased": "2019-08-24T14:15:22Z",
-  "commits": [
-    {}
-  ],
-  "refs": [
-    {}
-  ]
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -14491,26 +13071,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/organizations/{organization_slug}/releases/{version}/`
 
 Delete a release for a given organization.
@@ -14566,27 +13126,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/files/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/files/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -14685,32 +13224,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "name": "string",
-  "file": "string",
-  "dist": "string",
-  "header": "string"
-}';
-const headers = {
-  'Content-Type':'multipart/form-data',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/files/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `POST /api/0/organizations/{organization_slug}/releases/{version}/files/`
 
 Upload a new organization release file.
@@ -14783,27 +13296,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -14902,33 +13394,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "name": "string",
-  "file": "string",
-  "dist": "string",
-  "header": "string"
-}';
-const headers = {
-  'Content-Type':'multipart/form-data',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -15041,27 +13506,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/files/{file_id}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/releases/{version}/files/{file_id}/`
 
 Retrieve a file for a given release.
@@ -15156,31 +13600,6 @@ headers = {
 r = requests.put('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/files/{file_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "name": "string",
-  "dist": "string"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/files/{file_id}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -15288,26 +13707,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/files/{file_id}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/organizations/{organization_slug}/releases/{version}/files/{file_id}/`
 
 Delete a file for a given release.
@@ -15366,27 +13765,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/{file_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/{file_id}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -15485,31 +13863,6 @@ headers = {
 r = requests.put('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/{file_id}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "name": "string",
-  "dist": "string"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/{file_id}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -15618,26 +13971,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/{file_id}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/projects/{organization_slug}/{project_slug}/releases/{version}/files/{file_id}/`
 
 Delete a file for a given release.
@@ -15697,27 +14030,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/commits/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/commits/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -15805,27 +14117,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/commits/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/projects/{organization_slug}/{project_slug}/releases/{version}/commits/`
 
 List a project release's commits.
@@ -15909,26 +14200,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/commitfiles/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/releases/{version}/commitfiles/`
 
 Retrieve files changed in a release's commits
@@ -15984,26 +14255,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/resolved/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/projects/{organization_slug}/{project_slug}/releases/{version}/resolved/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -16065,27 +14316,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/deploys/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/deploys/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -16178,37 +14408,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/deploys/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "environment": "string",
-  "url": "string",
-  "name": "string",
-  "projects": [
-    "string"
-  ],
-  "dateStarted": "2019-08-24T14:15:22Z",
-  "dateFinished": "2019-08-24T14:15:22Z"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/releases/{version}/deploys/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -16329,27 +14528,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/sentry-app-installations/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/sentry-app-installations/`
 
 Return a list of integration platform installations for a given organization.
@@ -16442,33 +14620,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/sentry-app-installations/{uuid}/external-issues/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "issueId": 0,
-  "webUrl": "string",
-  "project": "string",
-  "identifier": "string"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/sentry-app-installations/{uuid}/external-issues/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -16571,26 +14722,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/sentry-app-installations/{uuid}/external-issues/{external_issue_id}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/sentry-app-installations/{uuid}/external-issues/{external_issue_id}/`
 
 Delete an external issue.
@@ -16655,27 +14786,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Groups', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Groups',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -16791,39 +14901,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Groups', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "schemas": [
-    "string"
-  ],
-  "displayName": "string",
-  "members": [
-    {
-      "value": "string",
-      "display": "string"
-    }
-  ]
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Groups',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -16943,27 +15020,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Groups/{team_id}',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/scim/v2/Groups/{team_id}`
 
 Query an individual team with a SCIM Group GET Request.
@@ -17054,37 +15110,6 @@ headers = {
 r = requests.patch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Groups/{team_id}', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "schemas": [
-    "string"
-  ],
-  "Operations": [
-    {
-      "op": "string",
-      "path": "string"
-    }
-  ]
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Groups/{team_id}',
-{
-  method: 'PATCH',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -17225,26 +15250,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Groups/{team_id}',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/organizations/{organization_slug}/scim/v2/Groups/{team_id}`
 
 Delete a team with a SCIM Group DELETE Request.
@@ -17303,27 +15308,6 @@ headers = {
 r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Users', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Users',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -17457,31 +15441,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "userName": "user@example.com",
-  "sentryOrgRole": "string"
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Users',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `POST /api/0/organizations/{organization_slug}/scim/v2/Users`
 
 Create a new Organization Member via a SCIM Users POST Request.
@@ -17611,27 +15570,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Users/{member_id}',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/scim/v2/Users/{member_id}`
 
 Query an individual organization member with a SCIM User GET Request.
@@ -17747,38 +15685,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "schemas": [
-    "string"
-  ],
-  "Operations": [
-    {
-      "op": "string",
-      "value": null,
-      "path": "string"
-    }
-  ]
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Users/{member_id}',
-{
-  method: 'PATCH',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `PATCH /api/0/organizations/{organization_slug}/scim/v2/Users/{member_id}`
 
 Update an organization member's attributes with a SCIM PATCH Request.
@@ -17863,26 +15769,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/scim/v2/Users/{member_id}',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `DELETE /api/0/organizations/{organization_slug}/scim/v2/Users/{member_id}`
 
 Delete an organization member with a SCIM User DELETE Request.
@@ -17952,27 +15838,6 @@ r = requests.get('https://sentry.io/api/0/organizations/{organization_slug}/even
 }, headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/events/?field=string',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -18138,27 +16003,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organization/{organization_slug}/monitors/{monitor_slug}/checkins/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organization/{organization_slug}/monitors/{monitor_slug}/checkins/`
 
 Retrieve a list of check-ins for a monitor
@@ -18254,39 +16098,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/organization/{organization_slug}/monitors/{monitor_slug}/checkins/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "status": "ok",
-  "duration": 2147483647,
-  "environment": "string",
-  "monitor_config": {
-    "schedule_type": "crontab",
-    "schedule": null,
-    "checkin_margin": 0,
-    "max_runtime": 1,
-    "timezone": "Africa/Abidjan"
-  }
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organization/{organization_slug}/monitors/{monitor_slug}/checkins/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -19036,39 +16847,6 @@ print(r.json())
 
 ```
 
-```javascript
-const inputBody = '{
-  "status": "ok",
-  "duration": 2147483647,
-  "environment": "string",
-  "monitor_config": {
-    "schedule_type": "crontab",
-    "schedule": null,
-    "checkin_margin": 0,
-    "max_runtime": 1,
-    "timezone": "Africa/Abidjan"
-  }
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organization/{organization_slug}/monitors/{monitor_slug}/checkins/{checkin_id}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `PUT /api/0/organization/{organization_slug}/monitors/{monitor_slug}/checkins/{checkin_id}/`
 
 Updates a check-in.
@@ -19801,27 +17579,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/monitors/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/monitors/`
 
 Lists monitors, including nested monitor enviroments. May be filtered to a project or environment.
@@ -19985,50 +17742,6 @@ headers = {
 r = requests.post('https://sentry.io/api/0/organizations/{organization_slug}/monitors/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "project": "string",
-  "name": "string",
-  "slug": "string",
-  "status": "active",
-  "type": "cron_job",
-  "config": {
-    "schedule_type": "crontab",
-    "schedule": null,
-    "checkin_margin": 0,
-    "max_runtime": 1,
-    "timezone": "Africa/Abidjan"
-  },
-  "alert_rule": {
-    "environment": "string",
-    "targets": [
-      {
-        "target_identifier": 0,
-        "target_type": "string"
-      }
-    ]
-  }
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/monitors/',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -20840,27 +18553,6 @@ print(r.json())
 
 ```
 
-```javascript
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/monitors/{monitor_slug}/',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
 `GET /api/0/organizations/{organization_slug}/monitors/{monitor_slug}/`
 
 Retrieves details for a monitor.
@@ -21022,50 +18714,6 @@ headers = {
 r = requests.put('https://sentry.io/api/0/organizations/{organization_slug}/monitors/{monitor_slug}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-const inputBody = '{
-  "project": "string",
-  "name": "string",
-  "slug": "string",
-  "status": "active",
-  "type": "cron_job",
-  "config": {
-    "schedule_type": "crontab",
-    "schedule": null,
-    "checkin_margin": 0,
-    "max_runtime": 1,
-    "timezone": "Africa/Abidjan"
-  },
-  "alert_rule": {
-    "environment": "string",
-    "targets": [
-      {
-        "target_identifier": 0,
-        "target_type": "string"
-      }
-    ]
-  }
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/monitors/{monitor_slug}/',
-{
-  method: 'PUT',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 
@@ -21873,26 +19521,6 @@ headers = {
 r = requests.delete('https://sentry.io/api/0/organizations/{organization_slug}/monitors/{monitor_slug}/', headers = headers)
 
 print(r.json())
-
-```
-
-```javascript
-
-const headers = {
-  'Authorization':'Bearer {access-token}'
-};
-
-fetch('https://sentry.io/api/0/organizations/{organization_slug}/monitors/{monitor_slug}/',
-{
-  method: 'DELETE',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
 
 ```
 

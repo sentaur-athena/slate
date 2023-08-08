@@ -10,4 +10,6 @@ gem 'rouge', '~> 3.21'
 gem 'redcarpet', '~> 3.6.0'
 gem 'nokogiri', '~> 1.13.3'
 gem 'sass'
+
+gem 'sprockets', '~> 3.7.2'
 gem 'webrick'
